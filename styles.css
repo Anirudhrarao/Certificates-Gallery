@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.certificate {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+.certificate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.certificate:hover img {
+  transform: scale(1.05);
+}
+
+.certificate .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Adjust the RGB values for a grayish color */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+.certificate:hover .overlay {
+  opacity: 1;
+}
+
+.certificate:hover {
+  animation: flicker 2s;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.certificate .overlay-content {
+  text-align: center;
+}
+
+.certificate .overlay-content h3 {
+  margin: 0;
+}
+
+.certificate .overlay-content p {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+}
