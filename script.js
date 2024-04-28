@@ -17,7 +17,7 @@ const titles = [
     "Django Web Development",
     "Django Rest Framework",
     "Pandas Data Analysis",
-    "Data Structures",
+    "Data Science",
     "Supervised Machine Learning",
     "Unsupervised Machine Learning",
     "Natural Language Processing",
